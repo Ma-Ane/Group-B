@@ -22,6 +22,7 @@ session = SessionLocal()
 #sample example function
 def sample_example():
     # create users for examples only and contains basic implementation
+    # I haved used a simple example implementation with a random password and values which are supposed to be securely stored in the database
     user1 = User(user_id=1, username="John", hashed_pass='AdFi7h76nD', dob=datetime(2000, 7, 19, 15, 30), date_created=datetime(2020, 2, 10, 2, 20))
     user2 = User(user_id=2, username="Bob", hashed_pass='AdFi7h76nD', dob=datetime(2007, 1, 1, 20, 4), date_created=datetime(2020, 2, 10, 2 , 20))
 
@@ -35,6 +36,7 @@ def sample_example():
     # send a message
     msg = Message(text="Hello, everyone!", sender=user1, room=room)
 
+    # add all the data in the database
     session.add_all([user1, user2, room, msg])
     session.commit()
 

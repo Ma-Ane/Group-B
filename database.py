@@ -13,7 +13,7 @@
 
 
 # import all the necessary libraries
-from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, create_engine, Table, JSON      # JSON for list
+from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Table, JSON      # JSON for list
 from sqlalchemy.orm import relationship, declarative_base
 from datetime import datetime
 
